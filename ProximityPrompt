@@ -1,0 +1,8 @@
+script.Parent.ProximityPrompt.Triggered:Connect(function(player)
+	player.leaderstats.Money.Value += 50
+	script.Parent.ProximityPrompt.Enabled = false
+	script.Parent.Transparency = 1
+	wait(5)
+	script.Parent.ProximityPrompt.Enabled = true
+	script.Parent.Transparency = 0
+end)
