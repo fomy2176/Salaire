@@ -1,0 +1,11 @@
+script.Parent.Touched:Connect(function(hit) --Ne rien toucher si vous avez placé correctement
+	local player = game.Players:GetPlayerFromCharacter(hit.Parent) --Ne rien toucher
+	if player then --Ne rien toucher
+		player.leaderstats.Money.Value += 50 --Ne rien toucher sauf si vous avez pas le même nom que 'Money' ou si vous voulez augmenter la valeur, diminuer etc..
+		script.Parent.CanTouch = false --Ne rien toucher si vous avez placé correctement
+		script.Parent.Transparency = 1 --Ne rien toucher si vous avez placé correctement
+		wait(5) --Ne rien toucher sauf le temps
+		script.Parent.CanTouch = true --Ne rien toucher si vous avez placé correctement
+		script.Parent.Transparency = 0 --Ne rien toucher si vous avez placé correctement
+	end
+end)
